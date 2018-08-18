@@ -1,0 +1,26 @@
+<?php
+	
+	function langs($lg,$pharse)
+	{
+		$arabic ="ar";
+		$english = "eng";
+		static $lang = array(
+			"Home" => "الرئيسية",
+			"About" => "عنا",
+			"Products" => "المنتجات"
+		);
+		if($arabic == $lg)
+		{
+			return $lang[$pharse];
+		}
+		else if($english == $lg)
+		{
+			$key = array_search($pharse, $lang);// search a value in array and return its key
+			return $key;
+		}
+		else
+		{
+			return $lang[$pharse];
+		}
+	}
+?>
